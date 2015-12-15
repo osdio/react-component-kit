@@ -18,4 +18,4 @@
 * dist: 存放编译后的lib文件
 * examples: 存放demo, 在开发的时候也可以拿`examples/simple`作为调试的载体
 * lib: 组件源文件的存放处
-* spec: 测试文件的存放处
+* __tests__: 测试文件的存放处
