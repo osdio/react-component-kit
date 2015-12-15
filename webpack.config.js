@@ -13,7 +13,9 @@ var baseConfig = {
         libraryTarget: 'commonjs',
         library: 'ReactListView'
     },
-
+    resolve: {
+        root: path.resolve('./node_modules')
+    },
     module: {
         loaders: [
             {

@@ -8,8 +8,8 @@
 ## 主要命令说明
 
 * `npm start`: 启动开发模式下的服务器, 这样默认会加载`examples/simple`下地index.html, 可以以此作为编写时的调试工具
-* `npm run watch-test`: TBD
-* `npm test`: TBD
+* `npm run test:w`: test模式, 会一直watch文件变动, 然后执行test
+* `npm test`: 测试
 * `npm run build`: 编译打包库到`dist`文件夹下
 
 
