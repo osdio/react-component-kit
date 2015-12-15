@@ -1,5 +1,4 @@
-# react listview
-
+# react-component-kit
 
 ## Development
 
