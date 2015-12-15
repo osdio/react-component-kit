@@ -5,10 +5,12 @@
   "scripts": {
     "test": "jest",
     "test:w": "jest --watch",
+    "test:c": "jest --coverage",
     "build": "NODE_ENV=production webpack -p",
     "start": "NODE_ENV=development webpack-dev-server --inline --hot --port 8088 --colors",
     "postinstall": "bower install"
   },
+  "main": "dist/react-listview.js",
   "author": "",
   "license": "BSD",
   "keywords": [
