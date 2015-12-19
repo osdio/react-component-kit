@@ -1,7 +1,9 @@
 /* jshint node: true */
 var path = require('path');
 var HtmlWebpackPlugin = require('html-webpack-plugin');
+var devIp = require('dev-ip');
 
+var ip = devIp()[0] || 'localhost';
 var env = process.env.NODE_ENV;
 
 var baseConfig = {
@@ -30,7 +32,7 @@ var baseConfig = {
                 exclude: /node_modules/,
                 loader: 'babel',
                 query: {
-                    presets: ['react', 'es2015']
+                    presets: ['react', 'es2015', 'stage-0']
                 }
             }
         ]
@@ -57,7 +59,8 @@ if (env === 'development') {
 
 if (env === 'production') {
     baseConfig.externals = {
-        'react': 'var React'
+        'react': 'React',
+        'react-dom': 'ReactDOM'
     };
 }
 
