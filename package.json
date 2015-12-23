@@ -8,7 +8,7 @@
     "test:c": "jest --coverage",
     "build": "NODE_ENV=production webpack -p",
     "start": "NODE_ENV=development webpack-dev-server --inline --hot --port 8088 --colors",
-    "postinstall": "bower install"
+    "patch": "npm run build && git add dist && git commit -m 'build' && npm version patch && mnpm publish"
   },
   "main": "dist/react-listview.js",
   "author": "",

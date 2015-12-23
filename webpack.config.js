@@ -5,15 +5,16 @@ var devIp = require('dev-ip');
 
 var ip = devIp()[0] || 'localhost';
 var env = process.env.NODE_ENV;
+var componentName = 'ReactComponentKit';
 
 var baseConfig = {
     context: path.join(__dirname),
     entry: './lib/index.js',
     output: {
         path: path.join(__dirname),
-        filename: 'dist/react-listview.js',
+        filename: 'dist/index.js',
         libraryTarget: 'commonjs',
-        library: 'ReactListView'
+        library: componentName
     },
     resolve: {
         root: path.resolve('./node_modules')
@@ -43,7 +44,7 @@ var baseConfig = {
 if (env === 'development') {
     baseConfig.output = {
         path: path.join(__dirname),
-        filename: 'react-listview.js'
+        filename: 'index.js'
     };
 
     baseConfig.plugins = [
@@ -55,12 +56,15 @@ if (env === 'development') {
         })
     ];
     baseConfig.entry = './examples/simple/demo.js';
+    baseConfig.devServer = {
+        host: ip
+    }
 }
 
 if (env === 'production') {
     baseConfig.externals = {
-        'react': 'React',
-        'react-dom': 'ReactDOM'
+        'react': 'react',
+        'react-dom': 'react-dom'
     };
 }
 
