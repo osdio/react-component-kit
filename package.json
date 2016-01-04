@@ -1,7 +1,7 @@
 {
-  "name": "react-listview",
+  "name": "react-component",
   "version": "0.0.1",
-  "description": "react listview",
+  "description": "react component",
   "scripts": {
     "test": "jest",
     "test:w": "jest --watch",
@@ -10,7 +10,7 @@
     "start": "NODE_ENV=development webpack-dev-server --inline --hot --port 8088 --colors",
     "patch": "npm run build && git add dist && git commit -m 'build' && npm version patch && mnpm publish"
   },
-  "main": "dist/react-listview.js",
+  "main": "index.js",
   "author": "",
   "license": "BSD",
   "keywords": [
